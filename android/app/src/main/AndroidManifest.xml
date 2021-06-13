@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.qr_reader">
    <application
+        android:name="androidx.multidex.MultiDexApplication" 
         android:label="qr_reader"
         android:icon="@mipmap/ic_launcher">
         <activity
