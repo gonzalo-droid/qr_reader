@@ -34,4 +34,10 @@ class ScanModel {
         "tipo": tipo,
         "valor": valor,
       };
+
+      @override
+  String toString() {
+    // TODO: implement toString
+    return "valor: "+this.valor + "-tipo: " + this.tipo ;
+  }
 }

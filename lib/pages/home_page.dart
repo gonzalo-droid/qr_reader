@@ -39,8 +39,12 @@ class _HomePageBody extends StatelessWidget {
     final uiProvider = Provider.of<UiProvider>(context);
 
     final currentIndex = uiProvider.selectedMenuOpt;
+    //TODO: TEMPORAL TEST DB
+    // DBProvider.db.getScanById(4).then((value) => print(value.valor));
+    // DBProvider.db.getAllScans().then(print);
+    // DBProvider.db.deleteAllScan().then(print);
     
-    DBProvider.db.database;
+    
     
 
     switch(currentIndex){
