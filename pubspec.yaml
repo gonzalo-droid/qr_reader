@@ -33,6 +33,13 @@ dependencies:
   provider: ^5.0.0
   flutter_barcode_scanner: ^2.0.0
 
+
+  #https://pub.dev/packages/url_launcher/install
+  url_launcher: ^5.7.10
+
+  #https://pub.dev/packages/google_maps_flutter/install
+  google_maps_flutter: ^2.0.6
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

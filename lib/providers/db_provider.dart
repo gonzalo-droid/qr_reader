@@ -30,7 +30,7 @@ class DBProvider {
     final path =
         join(documentsDirectory.path, 'ScanDB.db' //extension de slqlite
             );
-    print(path);
+    // print(path);
 
     //creacion de db
     return await openDatabase(path,
@@ -68,7 +68,7 @@ class DBProvider {
     //res id del last data inserted
     final res = await db.insert('Scans', newScan.toJson());
 
-    print(res);
+    // print(res);
     return res;
   }
 
@@ -113,7 +113,7 @@ class DBProvider {
     return res;
   }
 
-  Future<int> deleteScan(int id) async {
+  Future<int> deleteScanById(int id) async {
     final db = await database;
 
     final res = await db.delete('Scans',
@@ -126,6 +126,14 @@ class DBProvider {
     final db = await database;
 
     final res = await db.delete('Scans');
+
+    return res;
+  }
+
+  Future<int> deleteByType(String type) async {
+    final db = await database;
+
+    final res = await db.delete('Scans', where: 'tipo =  ?', whereArgs: [type]);
 
     return res;
   }
